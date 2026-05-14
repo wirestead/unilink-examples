@@ -1,5 +1,7 @@
 # unilink-examples
 
+[![CMake](https://github.com/unilink-lab/unilink-examples/actions/workflows/cmake.yml/badge.svg)](https://github.com/unilink-lab/unilink-examples/actions/workflows/cmake.yml)
+
 Practical examples for using `unilink` in real-world C++ communication
 scenarios.
 
@@ -54,6 +56,8 @@ cmake --build build-vcpkg
 ```
 
 Set `VCPKG_ROOT` to your vcpkg checkout path before running this command.
+If you do not have vcpkg yet, clone https://github.com/microsoft/vcpkg and run
+`bootstrap-vcpkg.sh`.
 
 ### Option 3: Use a local unilink source checkout
 
