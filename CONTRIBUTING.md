@@ -25,9 +25,10 @@ scripts/verify.sh
 ```
 
 The script always runs `git diff --check`, builds the FetchContent preset, and
-builds the vcpkg preset when `VCPKG_ROOT` is set. Use a vcpkg checkout that
-contains `jwsung91-unilink` 0.7.2 or newer. To include installed-package
-validation, pass an installed `unilink` prefix:
+builds the vcpkg preset. Set `VCPKG_ROOT` to a vcpkg checkout that contains
+`jwsung91-unilink` 0.7.2 or newer, or pass `--skip-vcpkg` if that path is not
+applicable. To include installed-package validation, pass an installed
+`unilink` prefix:
 
 ```bash
 scripts/verify.sh --installed-prefix /path/to/unilink/install

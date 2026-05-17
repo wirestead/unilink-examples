@@ -73,9 +73,12 @@ fi
 
 if [[ "$RUN_VCPKG" -eq 1 ]]; then
   if [[ -z "${VCPKG_ROOT:-}" ]]; then
-    echo "VCPKG_ROOT is not set; skipping vcpkg preset."
+    echo "VCPKG_ROOT is not set. Set VCPKG_ROOT or pass --skip-vcpkg." >&2
+    exit 1
   elif [[ ! -f "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" ]]; then
-    echo "VCPKG_ROOT does not contain scripts/buildsystems/vcpkg.cmake; skipping vcpkg preset."
+    echo "VCPKG_ROOT does not contain scripts/buildsystems/vcpkg.cmake." >&2
+    echo "Set VCPKG_ROOT to a bootstrapped vcpkg checkout or pass --skip-vcpkg." >&2
+    exit 1
   else
     run_preset vcpkg
   fi
