@@ -3,7 +3,8 @@
 The examples are grouped by transport and then by execution style.
 
 Commands below assume you are running them from the repository root after a
-successful build. All binaries are generated under `build/bin`.
+successful FetchContent preset build. All binaries are generated under
+`build/fetchcontent/bin`.
 
 ## Quick Start
 
@@ -27,36 +28,36 @@ TCP echo:
 
 ```bash
 # Terminal 1
-./build/bin/sync_tcp_echo_server
+./build/fetchcontent/bin/sync_tcp_echo_server
 
 # Terminal 2
-./build/bin/sync_tcp_echo_client
+./build/fetchcontent/bin/sync_tcp_echo_client
 ```
 
 UDP sender and receiver:
 
 ```bash
 # Terminal 1
-./build/bin/sync_udp_receiver
+./build/fetchcontent/bin/sync_udp_receiver
 
 # Terminal 2
-./build/bin/sync_udp_sender
+./build/fetchcontent/bin/sync_udp_sender
 ```
 
 UDS echo:
 
 ```bash
 # Terminal 1
-./build/bin/sync_uds_echo_server
+./build/fetchcontent/bin/sync_uds_echo_server
 
 # Terminal 2
-./build/bin/sync_uds_echo_client
+./build/fetchcontent/bin/sync_uds_echo_client
 ```
 
 Serial echo:
 
 ```bash
-./build/bin/sync_serial_echo /dev/ttyUSB0 115200
+./build/fetchcontent/bin/sync_serial_echo /dev/ttyUSB0 115200
 ```
 
 Serial examples require an available serial device or a virtual serial pair.

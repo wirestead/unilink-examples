@@ -15,7 +15,7 @@
 ## Usage
 
 ```bash
-./build/bin/sync_serial_echo [device] [baud]
+./build/fetchcontent/bin/sync_serial_echo [device] [baud]
 ```
 
 Defaults: `/dev/ttyUSB0` at `115200` baud. Type messages; `/quit` exits.
@@ -29,7 +29,7 @@ Use `socat` to create a virtual serial pair:
 socat -d -d pty,raw,echo=0,link=/tmp/ttyA pty,raw,echo=0,link=/tmp/ttyB
 
 # Terminal 2 - run serial echo
-./build/bin/sync_serial_echo /tmp/ttyA 115200
+./build/fetchcontent/bin/sync_serial_echo /tmp/ttyA 115200
 
 # Terminal 3 - interact
 socat - /tmp/ttyB

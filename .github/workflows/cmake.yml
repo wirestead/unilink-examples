@@ -64,7 +64,7 @@ jobs:
     timeout-minutes: 30
 
     env:
-      UNILINK_INSTALL_PREFIX: ${{ runner.temp }}/unilink-prefix
+      UNILINK_INSTALL_PREFIX: /tmp/unilink-prefix
 
     steps:
       - name: Checkout examples
